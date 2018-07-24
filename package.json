@@ -1,5 +1,5 @@
 {
-  "description": "NativeScript Application",
+  "description": "NativeScript Pokédex made with angular",
   "license": "SEE LICENSE IN <your-license-filename>",
   "readme": "NativeScript Application",
   "repository": "<fill-your-repository-here>",
@@ -42,5 +42,6 @@
     "nativescript-dev-webpack": "~0.14.0",
     "tslint": "~5.10.0",
     "typescript": "~2.7.2"
-  }
+  },
+  "author": "Bruno Codeman"
 }

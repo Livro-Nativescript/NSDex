@@ -5,7 +5,11 @@
 <GridLayout class="page page-content">
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
-            <Label [nsRouterLink]="['../item', item.id]" [text]="item.name" class="list-group-item"></Label>
+    <StackLayout orientation="horizontal">
+        <Image [src]="item.picture" width="150" height="150"></Image>
+        <Label [nsRouterLink]="['../item', item.id]" [text]="item.name" class="list-group-item"></Label>
+    </StackLayout>
+            
         </ng-template>
     </ListView>
 </GridLayout>
