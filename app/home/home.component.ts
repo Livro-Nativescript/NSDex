@@ -21,14 +21,8 @@ export class HomeComponent implements OnInit {
             for (let i = 0; i < res.results.length; i++) {
                 const element = <any> res.results[i];
                 element.picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i+1}.png`;
-                console.log(`${element.name}: ${element.picture}`);
                 this.items.push(element);
             }
-            //console.log(`res: ${JSON.stringify(res)}`);
-            // res.results.forEach(element => {
-            //     this.items.push(element);
-            // });
         },(error) => console.log(`Error loading pkmn: ${error}`));
-        //this.items = this.itemService.getItems();
     }
 }
