@@ -20,7 +20,9 @@ export class HomeComponent implements OnInit {
         {
             for (let i = 0; i < res.results.length; i++) {
                 const element = <any> res.results[i];
-                element.picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i+1}.png`;
+                const id = i+1;
+                element.picture = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+                element.id = id;
                 this.items.push(element);
             }
         },(error) => console.log(`Error loading pkmn: ${error}`));

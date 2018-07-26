@@ -5,11 +5,14 @@
 <GridLayout class="page page-content">
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
-    <StackLayout orientation="horizontal">
-        <Image [src]="item.picture" width="150" height="150"></Image>
-        <Label [nsRouterLink]="['../item', item.id]" [text]="item.name" class="list-group-item"></Label>
-    </StackLayout>
-            
+            <StackLayout [nsRouterLink]="['../item', item.id]" orientation="horizontal" width="210" class="list-group-item">
+                <CardView class="cardStyle card" margin="10" elevation="40" radius="1" >
+                    <GridLayout rows="200, auto, auto" columns="*, *">
+                            <Image class="img-rounded" [src]="item.picture" stretch="aspectFill" margin="10" colSpan="2" row="0"></Image>
+                            <Label class="label text-primary text-center text-capitalize" horizontalAlignment="center" [text]="item.name" textWrap="true" row="1" colSpan="2" ></Label>
+                    </GridLayout>
+                </CardView>
+            </StackLayout>
         </ng-template>
     </ListView>
 </GridLayout>

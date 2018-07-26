@@ -4,7 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule, COMPONENTS } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { CoreModule } from "./core/core.module";
-
+import { PagerModule } from "nativescript-pager/angular";
 @NgModule({
     bootstrap: [
         AppComponent
@@ -13,7 +13,8 @@ import { CoreModule } from "./core/core.module";
         NativeScriptModule,
         AppRoutingModule,
         CoreModule,
-        HttpClientModule
+        HttpClientModule,
+        PagerModule
     ],
     declarations: [
         AppComponent,
