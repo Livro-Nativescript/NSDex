@@ -1,12 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Pokemon } from "../DTOs/pokemon";
-import { IDataItem } from "~/core/data.service";
+import { IDataItem, DataService } from "~/core/data.service";
 @Component({
     selector: "ItemDetail",
     moduleId: module.id,
     templateUrl: "./item-detail.component.html",
-    styleUrls: ["~/../../custom.css"]
+    styleUrls: ["../../custom.css"]
 })
 export class ItemDetailComponent implements OnInit {
     item: IDataItem;
